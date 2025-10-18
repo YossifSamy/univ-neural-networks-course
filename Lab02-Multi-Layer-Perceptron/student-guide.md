@@ -1,4 +1,5 @@
 # Lab 02: Multi-Layer Perceptron
+
 ## Neural Networks Course - Computer Engineering
 
 ---
@@ -6,9 +7,10 @@
 ## 📋 Lab Information
 
 **Difficulty:** Intermediate  
-**Prerequisites:** Lab 01 - Single Neuron  
+**Prerequisites:** Lab 01 - Single Neuron
 
 **What You'll Learn:**
+
 - Why single neurons can't solve all problems
 - How to connect neurons in layers
 - Object-Oriented Programming (OOP) in Python
@@ -16,6 +18,7 @@
 - Solving real AI problems with neural networks
 
 **Files You'll Need:**
+
 - `student-guide.md` (this file)
 - `oop-tutorial.py` (OOP introduction)
 - `mlp-implementation.py` (MLP code)
@@ -28,6 +31,7 @@
 In Lab 01, you learned about single neurons. They're powerful, but limited. Today, you'll discover how connecting multiple neurons in **layers** creates networks that can solve complex, real-world problems!
 
 Think of it like building with LEGO:
+
 - **Single neuron** = one LEGO brick (limited)
 - **Multiple layers** = entire LEGO structure (powerful!)
 
@@ -61,8 +65,9 @@ This is called a **non-linearly separable** problem.
 ### Real-World Non-Linear Problems
 
 Single neurons can't solve:
+
 - Face recognition (complex patterns)
-- Speech recognition (temporal patterns)  
+- Speech recognition (temporal patterns)
 - Game AI (strategic decisions)
 - Medical diagnosis (interacting symptoms)
 - AND MANY MORE!
@@ -102,6 +107,7 @@ player2_weapon = "AWM"
 ```
 
 **Problems:**
+
 - Need 600+ variables for 100 players!
 - Difficult to keep track
 - Hard to add new features (what if we add "ammo"?)
@@ -118,10 +124,10 @@ class Player:
         self.armor = 0
         self.position = [0, 0]
         self.weapon = "Fists"
-    
+
     def move(self, x, y):
         self.position = [x, y]
-    
+
     def shoot(self, target):
         print(f"{self.name} shoots at {target.name}!")
 
@@ -136,6 +142,7 @@ player1.shoot(player2)
 ```
 
 **Benefits:**
+
 - Clean and organized
 - Easy to manage 100+ players
 - Simple to add features
@@ -150,37 +157,44 @@ player1.shoot(player2)
 Your instructor will walk you through:
 
 #### 1. **Class** = Blueprint/Template
+
 - Like the character creation screen in PUBG
 - Defines what properties and actions all players have
 - Written once, used many times
 
 #### 2. **Object** = Specific Instance
+
 - Each player in the game is an object
 - Created from the class blueprint
 - Has its own unique data (different health, position, etc.)
 
 **Analogy:**
+
 - **Class** = Cookie cutter (the shape/template)
 - **Object** = Cookie (each cookie made from that cutter)
 
 #### 3. **Attributes** = Properties/Data
+
 - `self.health` - player's health points
 - `self.armor` - player's armor level
 - `self.position` - where player is on map
 - Like stats in a game character
 
 #### 4. **Methods** = Actions/Functions
+
 - `self.move()` - change position
 - `self.shoot()` - attack another player
 - `self.heal()` - restore health
 - Like abilities in a game
 
 #### 5. **`self`** = "This Specific Object"
+
 - Refers to the particular player you're talking about
 - How each player keeps track of their own data
 - Think: "self.health" = "MY health" (from that player's perspective)
 
 #### 6. **`__init__`** = Constructor/Initializer
+
 - Special method that runs when creating a new object
 - Sets up starting values
 - Like clicking "Create Character" button
@@ -224,17 +238,20 @@ A **Multi-Layer Perceptron (MLP)** is a neural network with multiple layers of n
 ### Three Types of Layers
 
 #### 1. **Input Layer**
+
 - Not really neurons, just holds your data
 - Number of nodes = number of features in your data
 - Example: Image with 784 pixels → 784 input nodes
 
 #### 2. **Hidden Layer(s)**
+
 - Where the "learning" happens
 - Extract patterns and features from data
 - Can have one or many hidden layers
 - More layers = "deeper" network (deep learning!)
 
 #### 3. **Output Layer**
+
 - Produces final prediction
 - Number of nodes depends on problem:
   - Binary classification: 1 node (yes/no)
@@ -246,11 +263,13 @@ A **Multi-Layer Perceptron (MLP)** is a neural network with multiple layers of n
 We describe networks by listing neurons in each layer:
 
 **[3, 4, 2]** means:
+
 - 3 input features
 - 4 neurons in hidden layer
 - 2 neurons in output layer
 
 **[784, 128, 64, 10]** means:
+
 - 784 input features (28×28 image)
 - 128 neurons in first hidden layer
 - 64 neurons in second hidden layer
@@ -259,6 +278,7 @@ We describe networks by listing neurons in each layer:
 ### How Neurons Connect
 
 **Fully Connected (Dense) Layers:**
+
 - Each neuron connects to **ALL** neurons in the next layer
 - These connections have **weights** (importance values)
 - Each neuron has a **bias** term
@@ -270,11 +290,13 @@ We describe networks by listing neurons in each layer:
 For network [3, 4, 2]:
 
 **Layer 1 (Input → Hidden):**
+
 - Connections: 3 inputs × 4 neurons = 12 weights
 - Biases: 4 neurons = 4 biases
 - Total: 16 parameters
 
 **Layer 2 (Hidden → Output):**
+
 - Connections: 4 inputs × 2 neurons = 8 weights
 - Biases: 2 neurons = 2 biases
 - Total: 10 parameters
@@ -295,6 +317,7 @@ $$\mathbf{z} = \mathbf{W} \mathbf{x} + \mathbf{b}$$
 $$\mathbf{a} = f(\mathbf{z})$$
 
 **What each symbol means:**
+
 - **x:** Input to this layer
 - **W:** Weight matrix (all connection strengths)
 - **b:** Bias vector (one bias per neuron)
@@ -312,6 +335,7 @@ Let's solve XOR with a network: **[2, 2, 1]**
 **Hidden Layer:**
 
 Weights:
+
 ```
 W₁ = [[1.0, 1.0],
       [1.0, 1.0]]
@@ -320,12 +344,14 @@ W₁ = [[1.0, 1.0],
 Biases: b₁ = [-0.5, -1.5]
 
 **Neuron 1:**
+
 ```
 z₁ = (1.0 × 1) + (1.0 × 0) + (-0.5) = 0.5
 a₁ = sigmoid(0.5) = 0.62
 ```
 
 **Neuron 2:**
+
 ```
 z₂ = (1.0 × 1) + (1.0 × 0) + (-1.5) = -0.5
 a₂ = sigmoid(-0.5) = 0.38
@@ -357,6 +383,7 @@ output = sigmoid(-0.64) = 0.35 ≈ 0
 ## 💻 Part 5: Implementation
 
 **📁 Open files:**
+
 - `oop-tutorial.py` (OOP examples)
 - `mlp-implementation.py` (MLP code)
 
@@ -390,6 +417,7 @@ def predict(inputs):
 ```
 
 **Problems:**
+
 - Hard to add more layers
 - Lots of parameter passing
 - Confusing for large networks
@@ -406,14 +434,14 @@ class MLP:
         """
         self.layers = []
         # Automatically build all layers!
-    
+
     def forward(self, inputs):
         """Pass inputs through all layers."""
         activation = inputs
         for layer in self.layers:
             activation = layer.forward(activation)
         return activation
-    
+
     def predict(self, inputs):
         """Make a prediction."""
         return self.forward(inputs)
@@ -424,6 +452,7 @@ output = network.predict([1, 0])
 ```
 
 **Benefits:**
+
 - Clean and organized
 - Easy to add/remove layers
 - Simple to use
@@ -434,6 +463,7 @@ output = network.predict([1, 0])
 Your instructor will code this live. Follow along and type the code yourself!
 
 **Key steps:**
+
 1. Create the `Layer` class
 2. Create the `MLP` class
 3. Test with XOR problem
@@ -450,6 +480,7 @@ Let's solve a real problem: classifying iris flowers!
 **[NEED IMAGE: Photos of three iris flower species]**
 
 **Dataset:**
+
 - **3 species:** Setosa, Versicolor, Virginica
 - **4 features:** Sepal length, sepal width, petal length, petal width
 - **150 samples:** 50 of each species
@@ -461,11 +492,13 @@ Let's solve a real problem: classifying iris flowers!
 **Problem type:** Multi-class classification (3 classes)
 
 **Architecture:** [4, 8, 3]
+
 - **4 inputs:** Four flower measurements
 - **8 hidden neurons:** Extract patterns
 - **3 outputs:** One for each species
 
 **Activation functions:**
+
 - Hidden layer: ReLU (fast and effective)
 - Output layer: Softmax (converts to probabilities)
 
@@ -481,6 +514,7 @@ Interpretation: 65% confident it's class 1
 ### Running the Example
 
 Your instructor will demonstrate:
+
 1. Loading iris data
 2. Creating the network
 3. Making predictions
@@ -497,19 +531,25 @@ Your instructor will demonstrate:
 Complete three tasks:
 
 ### Task 1: Digit Recognition Network
+
 Design a network to recognize handwritten digits (0-9).
+
 - Decide appropriate architecture
 - Justify your choices
 - Implement the network
 
 ### Task 2: Architecture Experiments
+
 Compare different network architectures:
+
 - Shallow network (few neurons)
 - Deep network (many layers)
 - Wide network (many neurons per layer)
 
 ### Task 3: Game Move Predictor
+
 Build a network that predicts the best move in a simple game.
+
 - Multiple input features
 - Binary or multi-class output
 - Apply what you've learned!
@@ -541,7 +581,8 @@ A: Start with one or two. More layers = more complex patterns, but also harder t
 A: Common practice: start with layers between input and output size. Example: [10, 8, 6, 4] gradually decreases. Experiment!
 
 **Q: What's the difference between deep and shallow networks?**  
-A: 
+A:
+
 - **Shallow:** 1-2 hidden layers (simpler problems)
 - **Deep:** 3+ hidden layers (complex problems, more data needed)
 
@@ -559,6 +600,7 @@ A: Yes! Convolutional layers (for images), recurrent layers (for sequences), and
 ## 🎯 What's Next?
 
 In **Lab 03 - Training Neural Networks**, you'll learn:
+
 - **Backpropagation:** How networks learn
 - **Gradient Descent:** Optimization algorithm
 - **Loss Functions:** Measuring prediction quality
@@ -583,12 +625,15 @@ This is where it gets really exciting - your networks will **learn** from data a
 Want to go deeper? Check out:
 
 1. **Video:** 3Blue1Brown - "Neural Networks" Chapter 2 (YouTube)
+
    - Excellent visualization of gradient descent
 
 2. **Interactive:** TensorFlow Playground
+
    - Experiment with network architectures visually
 
 3. **Reading:** "Neural Networks and Deep Learning" by Michael Nielsen
+
    - Chapter 1 on MLPs (free online)
 
 4. **OOP Tutorial:** Real Python - "Object-Oriented Programming in Python"

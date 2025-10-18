@@ -1,4 +1,5 @@
 # Quick Start Guide for Instructors
+
 ## Neural Networks Labs - Teaching Assistant Reference
 
 ---
@@ -15,20 +16,23 @@ Each lab includes:
 ✅ Student-friendly guide with clear explanations  
 ✅ Python tutorial files (executable)  
 ✅ Implementation examples  
-✅ Student task assignments with grading rubrics  
+✅ Student task assignments with grading rubrics
 
 ---
 
 ## 📋 Before Your First Lab Session
 
 ### 1. Review Materials (1-2 hours before)
+
 - [ ] Read the instructor guide for your lab
 - [ ] Run all Python files to see outputs
 - [ ] Note where images are needed (marked "NEED IMAGE")
 - [ ] Prepare any board diagrams you'll draw
 
 ### 2. Prepare Images
+
 Search online or create diagrams for:
+
 - Biological neuron structure
 - Activation function graphs
 - Neural network architectures
@@ -36,6 +40,7 @@ Search online or create diagrams for:
 - Decision boundaries
 
 ### 3. Test Environment
+
 - [ ] Python 3.x installed and working
 - [ ] Students have access to Python
 - [ ] All files are accessible to students
@@ -45,6 +50,7 @@ Search online or create diagrams for:
 ## 🎓 Teaching Lab 01 - Single Neuron
 
 ### Timeline (3 hours):
+
 1. **Analogy** (30 min) - Water bottle classification
 2. **Mathematics** (45 min) - Neuron model and activation functions
 3. **Python Basics** (45 min) - Go through `python-basics.py`
@@ -52,12 +58,14 @@ Search online or create diagrams for:
 5. **Student Task** (15 min) - Assign homework
 
 ### Key Files:
+
 - **You read:** `instructor-guide.md`
 - **Students read:** `student-guide.md`
 - **Live code together:** `python-basics.py`, `neuron-implementation.py`
 - **Students complete:** `student-task.py`
 
 ### Teaching Tips:
+
 - ✏️ Draw water bottle → brain analogy on board
 - 🧮 Calculate weighted sum manually on board
 - 💻 Type code live, make intentional mistakes
@@ -65,6 +73,7 @@ Search online or create diagrams for:
 - 🎯 Emphasize: weights = importance, bias = threshold
 
 ### Common Issues:
+
 - **"What is bias?"** → It's like adjusting sensitivity
 - **"Why activation functions?"** → Enable non-linear patterns
 - **List indexing confusion** → Remember Python starts at 0
@@ -74,6 +83,7 @@ Search online or create diagrams for:
 ## 🎓 Teaching Lab 02 - Multi-Layer Perceptron
 
 ### Timeline (4 hours):
+
 1. **Limitations** (20 min) - Why single neuron isn't enough (XOR)
 2. **OOP Tutorial** (60 min) - CRUCIAL! Use PUBG Mobile example
 3. **Architecture** (45 min) - Layers, connections, parameters
@@ -83,6 +93,7 @@ Search online or create diagrams for:
 7. **Student Task** (30 min) - Assign homework
 
 ### Key Files:
+
 - **You read:** `instructor-guide.md`
 - **Students read:** `student-guide.md`
 - **Start with:** `oop-tutorial.py` - TAKE YOUR TIME HERE!
@@ -90,6 +101,7 @@ Search online or create diagrams for:
 - **Students complete:** `student-task.py`
 
 ### Teaching Tips:
+
 - 🎮 Use PUBG Mobile heavily - students love gaming examples
 - 📊 Draw XOR problem showing no single line separates classes
 - 🏗️ Draw network architectures on board
@@ -98,6 +110,7 @@ Search online or create diagrams for:
 - ⏰ Spend EXTRA time on OOP - it's the foundation!
 
 ### Common Issues:
+
 - **"What is self?"** → It's "this specific object" (this player's health)
 - **"Class vs Object?"** → Class = blueprint, Object = actual thing
 - **Matrix dimensions** → Draw on board to show compatibility
@@ -108,18 +121,21 @@ Search online or create diagrams for:
 ## 📝 Grading Student Tasks
 
 ### Lab 01 Student Task (100 points)
+
 - Task 1: Fruit Classifier (40 pts)
 - Task 2: Activation Comparison (20 pts)
 - Task 3: Light Controller (30 pts)
 - Reflection (10 pts)
 
 ### Lab 02 Student Task (100 points)
+
 - Task 1: Digit Recognition (35 pts)
 - Task 2: Architecture Experiments (30 pts)
 - Task 3: Tic-Tac-Toe AI (25 pts)
 - Reflection (10 pts)
 
 **Grading Focus:**
+
 - ✅ Understanding over perfection
 - ✅ Thoughtful justifications
 - ✅ Testing and experimentation
@@ -130,6 +146,7 @@ Search online or create diagrams for:
 ## 🎨 Creating Missing Images
 
 ### Tools You Can Use:
+
 1. **draw.io** (diagrams.net) - Free, easy network diagrams
 2. **Excalidraw** - Simple hand-drawn style diagrams
 3. **Python matplotlib** - Generate activation function graphs
@@ -137,12 +154,14 @@ Search online or create diagrams for:
 5. **PowerPoint/Keynote** - Simple shapes and arrows
 
 ### Priority Images:
+
 1. **Biological neuron** - Find online, label parts
 2. **Activation functions** - Create with matplotlib or online tool
 3. **XOR problem** - Draw 2D plot with 4 points
 4. **Network architecture** - Use draw.io, circles for neurons
 
 ### Example Python to Generate Activation Functions:
+
 ```python
 import numpy as np
 import matplotlib.pyplot as plt
@@ -165,6 +184,7 @@ plt.savefig('activation_functions.png')
 ## 💡 Student Questions You'll Get
 
 ### Lab 01:
+
 **Q:** "Why do we need bias?"  
 **A:** Like adjusting a thermostat - sets baseline sensitivity without input
 
@@ -175,6 +195,7 @@ plt.savefig('activation_functions.png')
 **A:** No! Only linearly separable problems. That's why we need Lab 02!
 
 ### Lab 02:
+
 **Q:** "Why learn OOP?"  
 **A:** Managing 50 layers without OOP = chaos. With OOP = elegant!
 
@@ -192,12 +213,14 @@ plt.savefig('activation_functions.png')
 ## 📞 Getting Help
 
 ### During Lab:
+
 - Encourage students to help each other
 - Walk around, check on progress
 - Don't give answers immediately - guide with questions
 - Celebrate small successes
 
 ### After Lab:
+
 - Office hours for struggling students
 - Review sessions before deadlines
 - Online forum for questions
@@ -210,16 +233,18 @@ plt.savefig('activation_functions.png')
 Your lab is successful if students can:
 
 ### After Lab 01:
+
 ✅ Explain neuron analogy in their own words  
 ✅ Calculate weighted sum manually  
 ✅ Implement a working neuron in Python  
-✅ Understand role of activation functions  
+✅ Understand role of activation functions
 
 ### After Lab 02:
+
 ✅ Explain OOP concepts (class, object, self)  
 ✅ Design appropriate network architectures  
 ✅ Implement MLP with clean code  
-✅ Understand forward propagation flow  
+✅ Understand forward propagation flow
 
 **Remember:** Understanding > Speed > Perfection
 
@@ -230,6 +255,7 @@ Your lab is successful if students can:
 After these two labs, students will be ready for:
 
 1. **Lab 03:** Training Neural Networks
+
    - Backpropagation
    - Gradient descent
    - Loss functions
@@ -246,18 +272,21 @@ After these two labs, students will be ready for:
 ## ✅ Pre-Lab Checklist
 
 **Week Before:**
+
 - [ ] Announce lab schedule
 - [ ] Share student guides
 - [ ] Ensure Python setup instructions sent
 - [ ] Prepare images needed
 
 **Day Before:**
+
 - [ ] Review instructor guide
 - [ ] Test all code
 - [ ] Prepare board materials
 - [ ] Check lab equipment
 
 **Day Of:**
+
 - [ ] Arrive early
 - [ ] Test projector/screen
 - [ ] Files accessible to students
@@ -302,6 +331,7 @@ Lab02-Multi-Layer-Perceptron/
 You have everything you need to teach excellent neural networks labs!
 
 **The materials include:**
+
 - ✅ Complete teaching plans with timing
 - ✅ Relatable, engaging examples
 - ✅ Solid mathematical foundations
@@ -310,6 +340,7 @@ You have everything you need to teach excellent neural networks labs!
 - ✅ Student assignments with rubrics
 
 **Your job:**
+
 - Bring energy and enthusiasm
 - Guide students through discoveries
 - Answer questions with patience
@@ -323,4 +354,4 @@ You have everything you need to teach excellent neural networks labs!
 
 ---
 
-*For questions about these materials, refer to instructor-guide.md in each lab folder for detailed information.*
+_For questions about these materials, refer to instructor-guide.md in each lab folder for detailed information._

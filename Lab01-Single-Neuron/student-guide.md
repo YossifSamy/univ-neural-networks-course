@@ -1,4 +1,5 @@
 # Lab 01: Understanding the Single Neuron
+
 ## Neural Networks Course - Computer Engineering
 
 ---
@@ -7,12 +8,14 @@
 
 **Difficulty:** Beginner  
 **What You'll Learn:**
+
 - How artificial neurons mimic biological neurons
 - The mathematics behind neural networks
 - How to implement a neuron in Python
 - Practical classification problems
 
 **Files You'll Need:**
+
 - `student-guide.md` (this file)
 - `python-basics.py` (Python tutorial)
 - `neuron-implementation.py` (implementation examples)
@@ -35,17 +38,21 @@ Think about holding a water bottle. How do you know if it's cold or hot? Your br
 **[NEED IMAGE: Human brain with inputs from hand and eyes processing information]**
 
 #### Your Inputs:
+
 1. **Touch** - Your hand feels the temperature
 2. **Visual cues** - You might see condensation (cold) or steam (hot)
 3. **Context** - Room temperature, time of day, etc.
 
 #### Processing:
+
 Your brain doesn't treat all inputs equally:
+
 - **Touch** is most important (70%)
 - **Visual cues** are helpful (20%)
 - **Context** adds a bit more (10%)
 
 #### Output:
+
 Your brain combines these inputs and decides: **COLD** or **HOT**
 
 This is exactly how an artificial neuron works!
@@ -57,6 +64,7 @@ This is exactly how an artificial neuron works!
 **[NEED IMAGE: Labeled diagram of biological neuron showing dendrites, soma, axon, and synapses]**
 
 Your brain has billions of neurons. Each neuron:
+
 - **Receives signals** through dendrites (inputs)
 - **Processes signals** in the cell body (weighted sum)
 - **Sends output** through the axon (output)
@@ -81,15 +89,16 @@ Let's assign numbers to our water bottle inputs:
 ```
 x₁ = Temperature from touch (scale: -10 to +10)
      -10 = very cold, 0 = neutral, +10 = very hot
-     
+
 x₂ = Visual cues (scale: -5 to +5)
      -5 = lots of condensation, 0 = nothing visible, +5 = steam
-     
+
 x₃ = Context (scale: -3 to +3)
      -3 = refrigerator, 0 = room temp, +3 = direct sunlight
 ```
 
 **Example:**
+
 ```
 x₁ = 8   (feels quite hot)
 x₂ = 3   (some steam visible)
@@ -119,6 +128,7 @@ Now we calculate how "hot" the overall signal is:
 $$z = w_1 \cdot x_1 + w_2 \cdot x_2 + w_3 \cdot x_3 + b$$
 
 **Symbol Guide:**
+
 - **z** = net input (total signal strength)
 - **wᵢ** = weight for input i
 - **xᵢ** = value of input i
@@ -129,6 +139,7 @@ $$z = w_1 \cdot x_1 + w_2 \cdot x_2 + w_3 \cdot x_3 + b$$
 $$z = (w_1 \times x_1) + (w_2 \times x_2) + (w_3 \times x_3) + b$$
 
 **Calculate it:**
+
 ```
 Given: x₁=8, x₂=3, x₃=1, w₁=0.7, w₂=0.2, w₃=0.1, b=-2
 
@@ -171,12 +182,14 @@ f(z) = 1 if z ≥ 0
 ```
 
 **What it does:** Sharp decision at threshold
+
 - Output 1 → HOT
 - Output 0 → COLD
 
 **[NEED IMAGE: Step function graph with sharp transition at 0]**
 
 **For our example:**
+
 ```
 z = 4.3
 f(4.3) = 1  (since 4.3 ≥ 0)
@@ -192,6 +205,7 @@ f(z) = 1 / (1 + e^(-z))
 ```
 
 **What it does:** Smooth curve, outputs between 0 and 1
+
 - Can interpret as **probability**
 - Output 0.9 → 90% confident it's HOT
 - Output 0.1 → 10% confident it's HOT (so probably COLD)
@@ -199,6 +213,7 @@ f(z) = 1 / (1 + e^(-z))
 **[NEED IMAGE: Sigmoid function S-curve from 0 to 1]**
 
 **For our example:**
+
 ```
 z = 4.3
 f(4.3) ≈ 0.987
@@ -214,6 +229,7 @@ f(z) = (e^z - e^(-z)) / (e^z + e^(-z))
 ```
 
 **What it does:** Smooth curve, outputs between -1 and 1
+
 - Zero-centered (better for some applications)
 - -1 = definitely COLD
 - +1 = definitely HOT
@@ -231,12 +247,14 @@ f(z) = z   if z ≥ 0
 ```
 
 **What it does:** Keep positive values, zero out negative
+
 - Very fast to compute
 - Most popular in modern neural networks
 
 **[NEED IMAGE: ReLU function showing flat 0 line for negative, diagonal for positive]**
 
 **For our example:**
+
 ```
 z = 4.3
 f(4.3) = 4.3
@@ -252,6 +270,7 @@ Putting it all together:
 $$y = f(w_1 \cdot x_1 + w_2 \cdot x_2 + w_3 \cdot x_3 + b)$$
 
 **In words:**
+
 1. Multiply each input by its weight
 2. Add all the weighted inputs
 3. Add the bias
@@ -267,6 +286,7 @@ Before implementing our neuron, you need to understand some Python concepts.
 **📁 Open the file:** `python-basics.py`
 
 Your instructor will guide you through:
+
 1. Variables and data types
 2. Lists (to store multiple inputs/weights)
 3. If/else statements (for decisions)
@@ -285,6 +305,7 @@ Now the exciting part - coding a neuron!
 **📁 Open the file:** `neuron-implementation.py`
 
 You'll see:
+
 1. A simple `Neuron` class
 2. Different activation functions
 3. The water bottle classifier example
@@ -295,6 +316,7 @@ You'll see:
 ### Key Concepts:
 
 #### Creating a Neuron:
+
 ```python
 neuron = Neuron(
     weights=[0.7, 0.2, 0.1],
@@ -304,6 +326,7 @@ neuron = Neuron(
 ```
 
 #### Making a Prediction:
+
 ```python
 inputs = [8, 3, 1]  # touch=8, visual=3, context=1
 output = neuron.predict(inputs)
@@ -319,16 +342,21 @@ print(f"Decision: {'HOT' if output == 1 else 'COLD'}")
 You have three tasks to complete:
 
 ### Task 1: Fruit Ripeness Classifier
+
 Implement a neuron that determines if a banana is ripe or unripe based on:
+
 - Color (yellow = ripe)
 - Smell (stronger = ripe)
 - Firmness (softer = ripe)
 
 ### Task 2: Experiment with Activation Functions
+
 Use the same inputs but try different activation functions. Observe how outputs change.
 
 ### Task 3: Light Switch Controller
+
 Create a neuron that decides whether to turn on a light based on:
+
 - Ambient light level
 - Time of day
 - Motion detection
@@ -369,6 +397,7 @@ A: Weights multiply inputs (input-dependent). Bias is added directly (input-inde
 ## 🎯 What's Next?
 
 In **Lab 02**, you'll learn:
+
 - How to connect multiple neurons in layers
 - Object-Oriented Programming (OOP) in Python
 - Building a complete Multi-Layer Perceptron
@@ -381,9 +410,11 @@ In **Lab 02**, you'll learn:
 Want to learn more? Check out:
 
 1. **Video:** 3Blue1Brown - "But what is a Neural Network?" (YouTube)
+
    - Amazing visual explanation of neural networks
 
 2. **Interactive:** TensorFlow Playground (https://playground.tensorflow.org)
+
    - Play with neural networks in your browser!
 
 3. **Reading:** "Neural Networks and Deep Learning" by Michael Nielsen
