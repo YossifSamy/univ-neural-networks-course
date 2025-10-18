@@ -144,11 +144,19 @@ $$z = \sum_{i=1}^{n} w_i \cdot x_i + b$$
 
 ✅ **Correct** (multi-line block):
 
+````markdown
+✅ **Correct** (multi-line block):
+
 ```markdown
 $$
 z = \sum_{i=1}^{n} w_i \cdot x_i + b
 $$
 ```
+````
+
+This ensures proper rendering in markdown viewers and maintains consistency across all documentation.
+
+````
 
 This ensures proper rendering in markdown viewers and maintains consistency across all documentation.
 
@@ -158,7 +166,7 @@ Throughout guides, you'll see:
 
 ```markdown
 **[NEED IMAGE: Description of needed image]**
-```
+````
 
 These mark where visual aids enhance learning. When adding content:
 

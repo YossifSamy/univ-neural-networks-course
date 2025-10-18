@@ -333,8 +333,14 @@ Total network: 16 + 10 = 26 parameters
 **General formula for one layer:**
 
 For layer ℓ:
-$$\mathbf{z}^{(\ell)} = \mathbf{W}^{(\ell)} \mathbf{a}^{(\ell-1)} + \mathbf{b}^{(\ell)}$$
-$$\mathbf{a}^{(\ell)} = f(\mathbf{z}^{(\ell)})$$
+
+$$
+\mathbf{z}^{(\ell)} = \mathbf{W}^{(\ell)} \mathbf{a}^{(\ell-1)} + \mathbf{b}^{(\ell)}
+$$
+
+$$
+\mathbf{a}^{(\ell)} = f(\mathbf{z}^{(\ell)})
+$$
 
 **Symbol explanation:**
 
@@ -549,7 +555,10 @@ class MLP:
 - Output layer: Softmax (for multi-class probability)
 
 **Softmax function:**
-$$\text{softmax}(z_i) = \frac{e^{z_i}}{\sum_{j} e^{z_j}}$$
+
+$$
+\text{softmax}(z_i) = \frac{e^{z_i}}{\sum_{j} e^{z_j}}
+$$
 
 Converts outputs to probabilities that sum to 1.
 

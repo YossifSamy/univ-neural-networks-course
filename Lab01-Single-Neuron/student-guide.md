@@ -125,7 +125,9 @@ w₃ = 0.1  (context is 10% important)
 
 Now we calculate how "hot" the overall signal is:
 
-$$z = w_1 \cdot x_1 + w_2 \cdot x_2 + w_3 \cdot x_3 + b$$
+$$
+z = w_1 \cdot x_1 + w_2 \cdot x_2 + w_3 \cdot x_3 + b
+$$
 
 **Symbol Guide:**
 
@@ -136,7 +138,10 @@ $$z = w_1 \cdot x_1 + w_2 \cdot x_2 + w_3 \cdot x_3 + b$$
 - **·** = multiplication
 
 **Expanded form:**
-$$z = (w_1 \times x_1) + (w_2 \times x_2) + (w_3 \times x_3) + b$$
+
+$$
+z = (w_1 \times x_1) + (w_2 \times x_2) + (w_3 \times x_3) + b
+$$
 
 **Calculate it:**
 
@@ -166,7 +171,9 @@ Think of bias as your **personal sensitivity level**.
 
 The activation function **f(z)** converts the weighted sum into a final decision.
 
-$$y = f(z)$$
+$$
+y = f(z)
+$$
 
 Where **y** is the final output.
 
@@ -267,7 +274,9 @@ f(4.3) = 4.3
 
 Putting it all together:
 
-$$y = f(w_1 \cdot x_1 + w_2 \cdot x_2 + w_3 \cdot x_3 + b)$$
+$$
+y = f(w_1 \cdot x_1 + w_2 \cdot x_2 + w_3 \cdot x_3 + b)
+$$
 
 **In words:**
 

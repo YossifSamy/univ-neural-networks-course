@@ -313,8 +313,13 @@ For network [3, 4, 2]:
 
 **For each layer:**
 
-$$\mathbf{z} = \mathbf{W} \mathbf{x} + \mathbf{b}$$
-$$\mathbf{a} = f(\mathbf{z})$$
+$$
+\mathbf{z} = \mathbf{W} \mathbf{x} + \mathbf{b}
+$$
+
+$$
+\mathbf{a} = f(\mathbf{z})
+$$
 
 **What each symbol means:**
 

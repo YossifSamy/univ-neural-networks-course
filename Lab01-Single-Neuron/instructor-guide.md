@@ -109,10 +109,15 @@ Else → COLD
 
 **Step 1: Weighted Sum (Linear Combination)**
 
-$$z = \sum_{i=1}^{n} w_i \cdot x_i + b$$
+$$
+z = \sum_{i=1}^{n} w_i \cdot x_i + b
+$$
 
 Expanded form:
-$$z = w_1 \cdot x_1 + w_2 \cdot x_2 + w_3 \cdot x_3 + ... + w_n \cdot x_n + b$$
+
+$$
+z = w_1 \cdot x_1 + w_2 \cdot x_2 + w_3 \cdot x_3 + ... + w_n \cdot x_n + b
+$$
 
 **Symbol Explanation:**
 
@@ -149,7 +154,9 @@ z = 4.3
 
 The activation function **f(z)** determines the final output based on the net input z.
 
-$$y = f(z)$$
+$$
+y = f(z)
+$$
 
 Where **y** is the output of the neuron.
 
@@ -277,10 +284,15 @@ f(z) = {z      if z ≥ 0
 
 Combining everything:
 
-$$y = f\left(\sum_{i=1}^{n} w_i \cdot x_i + b\right)$$
+$$
+y = f\left(\sum_{i=1}^{n} w_i \cdot x_i + b\right)
+$$
 
 Or expanded:
-$$y = f(w_1 \cdot x_1 + w_2 \cdot x_2 + ... + w_n \cdot x_n + b)$$
+
+$$
+y = f(w_1 \cdot x_1 + w_2 \cdot x_2 + ... + w_n \cdot x_n + b)
+$$
 
 **Water Bottle Example with Step Function:**
 
