@@ -282,6 +282,8 @@ class NeuralNetwork:
 
 **Example: Email Spam Classifier**
 
+![Phish Responder: A Hybrid Machine Learning Approach to Detect Phishing and Spam  Emails](D:\university\teaching-assistant\terms\2026-1st\neural-networks\images\asi-05-00073-g002.png)
+
 - **Input layer:** 10 features (word frequencies)
 - **Hidden layer 1:** 8 neurons
 - **Hidden layer 2:** 4 neurons
@@ -552,6 +554,7 @@ class MLP:
 
 - Hidden layer: ReLU (fast, effective)
 - Output layer: Softmax (for multi-class probability)
+- 
 
 **Softmax function:**
 
@@ -560,6 +563,8 @@ $$
 $$
 
 Converts outputs to probabilities that sum to 1.
+
+![Understanding the Softmax Activation Function: A Comprehensive Guide](D:\university\teaching-assistant\terms\2026-1st\neural-networks\images\img_blog_image1_inline_(2).png)
 
 #### 6.3 Implementation Walkthrough
 
@@ -590,10 +595,9 @@ Assign the tasks from `student-task.py`.
    - Understand why certain architectures work better
 
 2. **Task 2:** Experiment with different architectures
-
    - Compare shallow vs deep networks
    - Understand tradeoffs
-
+   
 3. **Task 3:** Build a game move predictor
    - Practical application
    - Multiple inputs and outputs
