@@ -44,7 +44,7 @@ This lab uses a **progressive teaching approach**:
 - Each input has different **importance/weight**
 - Brain processes these inputs and makes a **decision** (classification)
 
-![Human neuron diagram showing dendrites, cell body, axon, and synapses](images/neuron-diagram.png)
+![Human neuron diagram showing dendrites, cell body, axon, and synapses](../images/neuron-diagram.png)
 
 #### 1.2 Human Neuron Structure
 
@@ -87,7 +87,7 @@ If (weighted_sum > threshold) → HOT
 Else → COLD
 ```
 
-![Diagram showing water bottle → inputs (hand, eye) → neuron → output (cold/hot)](images/water-bottle-diagram.jpg)
+![Diagram showing water bottle → inputs (hand, eye) → neuron → output (cold/hot)](../images/water-bottle-diagram.jpg)
 
 ---
 
@@ -185,7 +185,7 @@ f(z) = {1  if z ≥ 0
 
 **Use Case:** Simple binary classification (our water bottle example)
 
-![Step function graph showing sharp transition at z=0](images/step-function.png)
+![Step function graph showing sharp transition at z=0](../images/step-function.png)
 
 ##### 2.3.2 Sigmoid Function (Logistic)
 
@@ -212,7 +212,7 @@ z = 5   →  f(z) ≈ 0.993 (almost 1)
 
 **Use Case:** Binary classification with probability output, hidden layers in neural networks
 
-![Sigmoid function graph showing S-curve from 0 to 1](images/sigmoid-function.png)
+![Sigmoid function graph showing S-curve from 0 to 1](../images/sigmoid-function.png)
 
 ##### 2.3.3 Tanh Function (Hyperbolic Tangent)
 
@@ -236,7 +236,7 @@ z = 2   →  f(z) ≈ 0.96
 
 **Use Case:** Hidden layers, when zero-centered output is beneficial
 
-![Tanh function graph showing S-curve from -1 to 1](images/tanh-function.png)
+![Tanh function graph showing S-curve from -1 to 1](../images/tanh-function.png)
 
 ##### 2.3.4 ReLU (Rectified Linear Unit)
 
@@ -262,7 +262,7 @@ z = 5   →  f(z) = 5
 
 **Use Case:** Modern deep learning, hidden layers (most popular currently)
 
-![ReLU function graph showing flat line at 0 for negative, linear for positive](images/relu-function.png)
+![ReLU function graph showing flat line at 0 for negative, linear for positive](../images/relu-function.png)
 
 ##### 2.3.5 Leaky ReLU
 

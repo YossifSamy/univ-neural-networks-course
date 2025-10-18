@@ -56,7 +56,7 @@ Input A | Input B | Output
 
 **Challenge:** Can you separate the outputs with a single straight line?
 
-![XOR visualization showing 4 points that cannot be separated by a line](images/xor-visualization.gif)
+![XOR visualization showing 4 points that cannot be separated by a line](../images/xor-visualization.gif)
 
 **Answer:** No! Points (0,0) and (1,1) should be together (output 0), while points (0,1) and (1,0) should be together (output 1). No single line can do this!
 
@@ -148,7 +148,7 @@ player1.shoot(player2)
 - Simple to add features
 - Professional code structure
 
-![PUBG Mobile character screen showing stats](images/pubg-character-stats.png)
+![PUBG Mobile character screen showing stats](../images/pubg-character-stats.png)
 
 ### OOP Key Concepts
 
@@ -233,7 +233,7 @@ A **Multi-Layer Perceptron (MLP)** is a neural network with multiple layers of n
 
 **Structure:**
 
-![MLP diagram showing input layer, hidden layers, and output layer with connections](images/mlp-architecture-diagram.png)
+![MLP diagram showing input layer, hidden layers, and output layer with connections](../images/mlp-architecture-diagram.png)
 
 ### Three Types of Layers
 
@@ -283,7 +283,7 @@ We describe networks by listing neurons in each layer:
 - These connections have **weights** (importance values)
 - Each neuron has a **bias** term
 
-![Fully connected layer showing all connections between two layers](images/weight-matrix-visualization.png)
+![Fully connected layer showing all connections between two layers](../images/weight-matrix-visualization.png)
 
 **Example: Counting Parameters**
 
@@ -381,7 +381,7 @@ output = sigmoid(-0.64) = 0.35 ≈ 0
 
 **Note:** These weights are just examples. In real networks, we **learn** the right weights through training (next lab!).
 
-![Forward propagation diagram showing values flowing through the XOR network](images/forward-propagation-diagram.png)
+![Forward propagation diagram showing values flowing through the XOR network](../images/forward-propagation-diagram.png)
 
 ---
 
@@ -482,7 +482,7 @@ Your instructor will code this live. Follow along and type the code yourself!
 
 Let's solve a real problem: classifying iris flowers!
 
-![Photos of three iris flower species](images/iris-flower-types.png)
+![Photos of three iris flower species](../images/iris-flower-types.png)
 
 **Dataset:**
 
@@ -490,7 +490,7 @@ Let's solve a real problem: classifying iris flowers!
 - **4 features:** Sepal length, sepal width, petal length, petal width
 - **150 samples:** 50 of each species
 
-![Scatter plot showing three clusters of iris species](images/iris-scatter-plot.png)
+![Scatter plot showing three clusters of iris species](../images/iris-scatter-plot.png)
 
 ### Network Design
 

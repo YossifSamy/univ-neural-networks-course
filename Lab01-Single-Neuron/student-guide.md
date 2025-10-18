@@ -35,7 +35,7 @@ Welcome to your first Neural Networks lab! Today, you'll learn how computers can
 
 Think about holding a water bottle. How do you know if it's cold or hot? Your brain uses multiple sources of information:
 
-![Human brain with inputs from hand and eyes processing information](images/brain-inputs-analogy.png)
+![Human brain with inputs from hand and eyes processing information](../images/brain-inputs-analogy.png)
 
 #### Your Inputs:
 
@@ -61,7 +61,7 @@ This is exactly how an artificial neuron works!
 
 ### The Human Neuron
 
-![Labeled diagram of biological neuron showing dendrites, soma, axon, and synapses](images/neuron-diagram.png)
+![Labeled diagram of biological neuron showing dendrites, soma, axon, and synapses](../images/neuron-diagram.png)
 
 Your brain has billions of neurons. Each neuron:
 
@@ -80,7 +80,7 @@ An artificial neuron mimics this structure mathematically!
 
 Let's build the math step by step!
 
-![Diagram of artificial neuron with inputs, weights, sum, activation, and output](images/artificial-neuron-diagram.png)
+![Diagram of artificial neuron with inputs, weights, sum, activation, and output](../images/artificial-neuron-diagram.png)
 
 #### Step 1: Inputs
 
@@ -193,7 +193,7 @@ f(z) = 1 if z ≥ 0
 - Output 1 → HOT
 - Output 0 → COLD
 
-![Step function graph with sharp transition at 0](images/step-function.png)
+![Step function graph with sharp transition at 0](../images/step-function.png)
 
 **For our example:**
 
@@ -217,7 +217,7 @@ f(z) = 1 / (1 + e^(-z))
 - Output 0.9 → 90% confident it's HOT
 - Output 0.1 → 10% confident it's HOT (so probably COLD)
 
-![Sigmoid function S-curve from 0 to 1](images/sigmoid-function.png)
+![Sigmoid function S-curve from 0 to 1](../images/sigmoid-function.png)
 
 **For our example:**
 
@@ -242,7 +242,7 @@ f(z) = (e^z - e^(-z)) / (e^z + e^(-z))
 - +1 = definitely HOT
 - 0 = uncertain
 
-![Tanh function S-curve from -1 to 1](images/tanh-function.png)
+![Tanh function S-curve from -1 to 1](../images/tanh-function.png)
 
 ---
 
@@ -258,7 +258,7 @@ f(z) = z   if z ≥ 0
 - Very fast to compute
 - Most popular in modern neural networks
 
-![ReLU function showing flat 0 line for negative, diagonal for positive](images/relu-function.png)
+![ReLU function showing flat 0 line for negative, diagonal for positive](../images/relu-function.png)
 
 **For our example:**
 

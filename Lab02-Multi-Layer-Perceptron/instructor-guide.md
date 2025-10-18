@@ -45,7 +45,7 @@ Quick review of Lab 01:
 - Can classify simple patterns
 - Works well for linearly separable problems
 
-![Linear decision boundary showing two classes separated by a line](images/linear-decision-boundary.png)
+![Linear decision boundary showing two classes separated by a line](../images/linear-decision-boundary.png)
 
 #### 1.2 The XOR Problem
 
@@ -71,7 +71,7 @@ A | B | Output
 
 **Answer:** No! This is NOT linearly separable.
 
-![XOR problem visualization showing 4 points that cannot be separated by a single line](images/xor-visualization.gif)
+![XOR problem visualization showing 4 points that cannot be separated by a single line](../images/xor-visualization.gif)
 
 #### 1.3 Why We Need Multiple Layers
 
@@ -88,7 +88,7 @@ A | B | Output
 3. Game playing (strategic decisions)
 4. Medical diagnosis (multiple interacting factors)
 
-![Progression showing how multiple neurons can create curved decision boundaries](images/curved-decision-boundaries.png)
+![Progression showing how multiple neurons can create curved decision boundaries](../images/curved-decision-boundaries.png)
 
 ---
 
@@ -133,7 +133,7 @@ player2_weapon = "AWM"
 - Difficult to add new features
 - No organization
 
-![Cluttered code screenshot showing many variables](images/cluttered-code-screenshot.png)
+![Cluttered code screenshot showing many variables](../images/cluttered-code-screenshot.png)
 
 #### 2.2 Introducing Classes and Objects
 
@@ -209,7 +209,7 @@ Refer students to `oop-tutorial.py` which shows:
 - Call methods on different players
 - Show how each maintains its own state
 
-![PUBG Mobile screenshot with character stats highlighted](images/pubg-character-stats.png)
+![PUBG Mobile screenshot with character stats highlighted](../images/pubg-character-stats.png)
 
 #### 2.4 Why OOP for Neural Networks?
 
@@ -271,7 +271,7 @@ class NeuralNetwork:
 - Binary classification: 1 or 2 nodes
 - Multi-class: multiple nodes
 
-![MLP architecture diagram showing input (3 nodes), hidden (4 nodes), output (2 nodes) with all connections](images/mlp-architecture-diagram.png)
+![MLP architecture diagram showing input (3 nodes), hidden (4 nodes), output (2 nodes) with all connections](../images/mlp-architecture-diagram.png)
 
 #### 3.2 Network Notation**Common notation:**
 
@@ -319,7 +319,7 @@ Layer 2 (Hidden → Output):
 Total network: 16 + 10 = 26 parameters
 ```
 
-![Weight matrix visualization showing connections as a matrix](images/weight-matrix-visualization.png)
+![Weight matrix visualization showing connections as a matrix](../images/weight-matrix-visualization.png)
 
 ---
 
@@ -401,7 +401,7 @@ output = sigmoid(-0.64) ≈ 0.35 ≈ 0 (XOR output for [1,0])
 
 **Work through all 4 XOR cases on board!**
 
-![Step-by-step forward propagation diagram with values flowing through network](images/forward-propagation-diagram.png)
+![Step-by-step forward propagation diagram with values flowing through network](../images/forward-propagation-diagram.png)
 
 #### 4.3 Matrix Formulation
 
@@ -528,7 +528,7 @@ class MLP:
 - **4 features:** Sepal length, sepal width, petal length, petal width
 - **150 samples:** 50 of each species
 
-![Iris flower types showing the three different species](images/iris-flower-types.png)
+![Iris flower types showing the three different species](../images/iris-flower-types.png)
 
 **Why this problem?**
 
@@ -537,7 +537,7 @@ class MLP:
 - Manageable size
 - Visual patterns
 
-![Scatter plot of iris data showing clusters of three species](images/iris-scatter-plot.png)
+![Scatter plot of iris data showing clusters of three species](../images/iris-scatter-plot.png)
 
 #### 6.2 Network Design
 
