@@ -32,6 +32,19 @@ Build on Lab 01 to create multi-layer networks:
 - MLP architecture and forward propagation
 - Practical AI applications
 
+### **Lab 03: Training Neural Networks**
+
+**Duration:** 4 hours  
+**Difficulty:** Advanced
+
+Learn how networks learn from data automatically:
+
+- Gradient descent optimization (mountain climbing analogy)
+- Loss functions and error minimization
+- Backpropagation algorithm
+- Training loops and hyperparameter tuning
+- XOR training from scratch
+
 ---
 
 ## 📁 Workspace Structure
@@ -46,11 +59,18 @@ neural-networks/
 │   ├── neuron-implementation.py    # Complete neuron implementation
 │   └── student-task.py             # Student assignments
 │
-└── Lab02-Multi-Layer-Perceptron/
+├── Lab02-Multi-Layer-Perceptron/
+│   ├── instructor-guide.md         # Detailed teaching guide for instructors
+│   ├── student-guide.md            # Student-friendly lab manual
+│   ├── oop-tutorial.py             # OOP concepts with PUBG Mobile example
+│   ├── mlp-implementation.py       # MLP implementation (with & without OOP)
+│   └── student-task.py             # Student assignments
+│
+└── Lab03-Training-Neural-Networks/
     ├── instructor-guide.md         # Detailed teaching guide for instructors
     ├── student-guide.md            # Student-friendly lab manual
-    ├── oop-tutorial.py             # OOP concepts with PUBG Mobile example
-    ├── mlp-implementation.py       # MLP implementation (with & without OOP)
+    ├── gradient-descent-tutorial.py # Optimization fundamentals
+    ├── training-implementation.py  # Backpropagation and training
     └── student-task.py             # Student assignments
 ```
 
@@ -119,6 +139,40 @@ neural-networks/
 - Step through XOR calculation manually
 - Show both procedural and OOP versions
 
+### Lab 03 - Training Neural Networks
+
+**File:** `Lab03-Training-Neural-Networks/instructor-guide.md`
+
+**What's Included:**
+
+- Complete 4-hour lesson plan
+- Mountain climbing analogy for gradient descent
+- Loss functions (MSE) with examples
+- Backpropagation explained step-by-step
+- Training loop structure
+- Learning rate experiments
+- XOR training demonstration
+
+**Teaching Flow:**
+
+1. Review and Motivation (20 min)
+2. Loss Functions (30 min)
+3. Gradient Descent Concept (45 min)
+4. Backpropagation Algorithm (60 min) - CRITICAL!
+5. Training Loop (40 min)
+6. Practical Considerations (35 min)
+7. Implementation Session (40 min)
+8. Student Task Introduction (10 min)
+
+**Key Teaching Tips:**
+
+- Use mountain climbing analogy repeatedly
+- Go slowly on backpropagation - hardest concept
+- Show loss decreasing in real-time
+- Let students experiment with learning rates
+- Celebrate when XOR learns!
+- Visual aids are crucial for backprop
+
 ---
 
 ## 👨‍🎓 For Students
@@ -140,6 +194,14 @@ neural-networks/
 4. Study `mlp-implementation.py` examples
 5. Complete `student-task.py` and submit
 
+**For Lab 03:**
+
+1. Ensure Labs 01 and 02 are completed
+2. Read `student-guide.md` - understand the mountain analogy
+3. Work through `gradient-descent-tutorial.py` - fundamental concepts
+4. Study `training-implementation.py` - backpropagation examples
+5. Complete `student-task.py` and submit
+
 ### What to Submit
 
 **Lab 01:**
@@ -154,6 +216,14 @@ neural-networks/
 - Architecture designs justified
 - All reflection questions answered
 - Code tested and working
+
+**Lab 03:**
+
+- Completed `student-task.py` with all three tasks
+- Gradient descent implemented correctly
+- XOR network successfully trained
+- Hyperparameter experiments documented
+- All reflection questions answered
 
 ---
 
@@ -287,25 +357,33 @@ These labs follow a **progressive teaching approach**:
 - Implement MLPs with clean code
 - Apply MLPs to real problems
 
+### After Lab 03, students will:
+
+- Understand gradient descent optimization
+- Explain backpropagation algorithm
+- Implement training loops
+- Tune hyperparameters (learning rate, architecture)
+- Train networks to learn from data automatically
+
 ---
 
 ## 🚀 Next Steps
 
 After completing these labs:
 
-**Lab 03** (Future): Training Neural Networks
+**Lab 04** (Future): Advanced Techniques
 
-- Backpropagation algorithm
-- Gradient descent optimization
-- Loss functions
-- Actual learning from data
+- Advanced optimizers (Adam, RMSprop, Momentum)
+- Regularization (Dropout, L2)
+- Batch normalization
+- Real datasets (MNIST, CIFAR-10)
 
-**Lab 04** (Future): Advanced Topics
+**Lab 05** (Future): Deep Learning Applications
 
-- Convolutional Neural Networks
-- Recurrent Neural Networks
-- Real-world datasets
-- Deep learning frameworks
+- Convolutional Neural Networks (CNNs)
+- Recurrent Neural Networks (RNNs)
+- Transfer learning
+- Deep learning frameworks (PyTorch, TensorFlow)
 
 ---
 
