@@ -205,3 +205,4 @@ When adding new labs or examples:
 ---
 
 **Teaching Philosophy**: Progressive teaching through relatable analogies → mathematical foundation → practical implementation → hands-on tasks. Code is intentionally educational, not production-optimized.
+Also make sure that analogies for egyptian computer engineering students are culturally relevant and relatable.
